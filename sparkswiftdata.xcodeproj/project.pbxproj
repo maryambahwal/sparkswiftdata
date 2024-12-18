@@ -46,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		45976EFC2D12B50700AB714E /* dogGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = dogGif.gif; path = ../../../../Desktop/dogGif.gif; sourceTree = "<group>"; };
+		45976EFE2D12B5D600AB714E /* dogGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dogGif.gif; sourceTree = "<group>"; };
 		5C328A012D1191E5001B851A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5C328A032D1191FF001B851A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5C328A052D119254001B851A /* PageContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContent.swift; sourceTree = "<group>"; };
@@ -107,7 +108,6 @@
 				5C328A0B2D119484001B851A /* TaskList.swift */,
 				5C328A0D2D1194A4001B851A /* TaskView.swift */,
 				5C328A012D1191E5001B851A /* HomeView.swift */,
-				5CA3C3192D118C8F003F647F /* GhadaView.swift */,
 				5C328A032D1191FF001B851A /* ContentView.swift */,
 				45976EFC2D12B50700AB714E /* dogGif.gif */,
 				5C328A072D1192A1001B851A /* Gif.swift */,
@@ -126,6 +126,8 @@
 		5CA3C2E32D1171CC003F647F = {
 			isa = PBXGroup;
 			children = (
+				45976EFE2D12B5D600AB714E /* dogGif.gif */,
+				5CA3C3192D118C8F003F647F /* GhadaView.swift */,
 				5CA3C2EE2D1171CC003F647F /* sparkswiftdata */,
 				5CA3C2FF2D1171CD003F647F /* sparkswiftdataTests */,
 				5CA3C3092D1171CD003F647F /* sparkswiftdataUITests */,
