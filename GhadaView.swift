@@ -12,68 +12,72 @@ struct GhadaView: View {
     @State private var progress: CGFloat = 0
     @State private var selectedIndex: Int = 0
     @State private var isSkipPressed = false
+    @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
 
     var body: some View {
-        NavigationView {
-            ZStack {
-                VStack(spacing: 0) { // Spacing removed between views
-                    HStack {
-                        Spacer()
-                        // Skip button
-                        Button(action: {
-                            isSkipPressed = true
-                        }) {
-                            Text("Skip")
-                                .foregroundColor(.our)
-                                .padding(.trailing, 20)
-                        }
-                        .background(
-                            NavigationLink(
-                                destination: IntroduceView(),
-                                isActive: $isSkipPressed,
-                                label: { EmptyView() }
+        if hasSeenOnboarding {
+           Homepage()
+        } else {
+            NavigationView {
+                ZStack {
+                    VStack(spacing: 0) { // Spacing removed between views
+                        HStack {
+                            Spacer()
+                            // Skip button
+                            Button(action: {
+                                isSkipPressed = true
+                                hasSeenOnboarding = true // Set to true on skip
+                            }) {
+                                Text("Skip")
+                                    .foregroundColor(.our)
+                                    .padding(.trailing, 20)
+                            }
+                            .background(
+                                NavigationLink(
+                                    destination: IntroduceView(),
+                                    isActive: $isSkipPressed,
+                                    label: { EmptyView() }
+                                )
                             )
-                        
-                        )
-
-                    }
-                    .padding(.horizontal)
-
-                    // Main Page Content
-                    TabView(selection: $selectedIndex) {
-                        ForEach(0..<content.count, id: \.self) { index in
-                            PageContentView(item: content[index])
-                                .tag(index)
                         }
+                        .padding(.horizontal)
+
+                        // Main Page Content
+                        TabView(selection: $selectedIndex) {
+                            ForEach(0..<content.count, id: \ .self) { index in
+                                PageContentView(item: content[index])
+                                    .tag(index)
+                            }
+                        }
+                        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                        .onChange(of: selectedIndex, perform: { _ in
+                            updateProgress()
+                        })
+                        .frame(maxHeight: .infinity)
+
+                        // Page Indicator Dots
+                        DotsProgress(selectedIndex: $selectedIndex)
+                            .padding(.bottom, 10)
                     }
-                    
-                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                    .onChange(of: selectedIndex, perform: { _ in
-                        updateProgress()
-                    })
-                    .frame(maxHeight: .infinity)
 
-                    // Page Indicator Dots
-                    DotsProgress(selectedIndex: $selectedIndex)
-                        .padding(.bottom, 10)
+                    // SemiCircle at the absolute bottom
+                    VStack {
+                        Spacer()
+                        SemiCircle()
+                            .fill(Color.gray.opacity(0.3))
+                            .frame(height: 400)
+                            .padding(.bottom, -190)
+                            .edgesIgnoringSafeArea(.bottom)
+                    }
                 }
-
-                // SemiCircle at the absolute bottom
-                VStack {
-                    Spacer()
-                    SemiCircle()
-                        .fill(Color.gray.opacity(0.3))
-                        .frame(height: 400)
-                        .padding(.bottom, -190)
-                        .edgesIgnoringSafeArea(.bottom)
+                .onAppear {
+                    updateProgress()
                 }
-               
             }
-            .onAppear {
-                updateProgress()
+            .onDisappear {
+                hasSeenOnboarding = true // Set flag when onboarding finishes
             }
         }
-       
     }
 
     func updateProgress() {
@@ -88,7 +92,7 @@ struct DotsProgress: View {
 
     var body: some View {
         HStack(spacing: 10) {
-            ForEach(0..<content.count, id: \.self) { index in
+            ForEach(0..<content.count, id: \ .self) { index in
                 Circle()
                     .fill(selectedIndex == index ? Color.gray : Color.primary)
                     .frame(width: 9, height: 9)
@@ -122,7 +126,6 @@ struct PageContentView: View {
                 .frame(maxWidth: 350)
                 .padding(.bottom, 50)
         }
-       
         .padding(.horizontal, 25)
     }
 
@@ -134,7 +137,7 @@ struct PageContentView: View {
         }
         let firstWord = String(words[0])
         let remainingText = words.dropFirst().joined(separator: " ")
-        
+
         return Text(firstWord)
             .foregroundColor(.our)
             .bold() +
@@ -157,7 +160,6 @@ struct SemiCircle: Shape {
         path.addLine(to: CGPoint(x: rect.width, y: rect.height))
         path.addLine(to: CGPoint(x: 0, y: rect.height))
         return path
-        
     }
 }
 
