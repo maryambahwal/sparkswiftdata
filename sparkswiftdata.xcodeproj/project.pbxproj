@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45976EFD2D12B50700AB714E /* dogGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 45976EFC2D12B50700AB714E /* dogGif.gif */; };
 		5C328A022D1191E5001B851A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C328A012D1191E5001B851A /* HomeView.swift */; };
 		5C328A042D1191FF001B851A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C328A032D1191FF001B851A /* ContentView.swift */; };
 		5C328A062D119254001B851A /* PageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C328A052D119254001B851A /* PageContent.swift */; };
@@ -18,6 +17,7 @@
 		5C328A102D1194D6001B851A /* TaskTimeFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C328A0F2D1194D6001B851A /* TaskTimeFrame.swift */; };
 		5C328A122D119551001B851A /* TaskSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C328A112D119551001B851A /* TaskSheet.swift */; };
 		5C328A172D11E679001B851A /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C328A162D11E679001B851A /* TaskViewModel.swift */; };
+		5C328A212D12E0A9001B851A /* dogGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5C328A202D12E0A9001B851A /* dogGif.gif */; };
 		5CA3C2F02D1171CC003F647F /* sparkswiftdataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA3C2EF2D1171CC003F647F /* sparkswiftdataApp.swift */; };
 		5CA3C2F42D1171CD003F647F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CA3C2F32D1171CD003F647F /* Assets.xcassets */; };
 		5CA3C2F72D1171CD003F647F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CA3C2F62D1171CD003F647F /* Preview Assets.xcassets */; };
@@ -45,8 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		45976EFC2D12B50700AB714E /* dogGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = dogGif.gif; path = ../../../../Desktop/dogGif.gif; sourceTree = "<group>"; };
-		45976EFE2D12B5D600AB714E /* dogGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dogGif.gif; sourceTree = "<group>"; };
 		5C328A012D1191E5001B851A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5C328A032D1191FF001B851A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5C328A052D119254001B851A /* PageContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContent.swift; sourceTree = "<group>"; };
@@ -57,6 +55,7 @@
 		5C328A0F2D1194D6001B851A /* TaskTimeFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTimeFrame.swift; sourceTree = "<group>"; };
 		5C328A112D119551001B851A /* TaskSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSheet.swift; sourceTree = "<group>"; };
 		5C328A162D11E679001B851A /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		5C328A202D12E0A9001B851A /* dogGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = dogGif.gif; path = ../../../Downloads/dogGif.gif; sourceTree = "<group>"; };
 		5CA3C2EC2D1171CC003F647F /* sparkswiftdata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sparkswiftdata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA3C2EF2D1171CC003F647F /* sparkswiftdataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sparkswiftdataApp.swift; sourceTree = "<group>"; };
 		5CA3C2F32D1171CD003F647F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,7 +108,6 @@
 				5C328A0D2D1194A4001B851A /* TaskView.swift */,
 				5C328A012D1191E5001B851A /* HomeView.swift */,
 				5C328A032D1191FF001B851A /* ContentView.swift */,
-				45976EFC2D12B50700AB714E /* dogGif.gif */,
 				5C328A072D1192A1001B851A /* Gif.swift */,
 			);
 			path = Views;
@@ -126,7 +124,6 @@
 		5CA3C2E32D1171CC003F647F = {
 			isa = PBXGroup;
 			children = (
-				45976EFE2D12B5D600AB714E /* dogGif.gif */,
 				5CA3C3192D118C8F003F647F /* GhadaView.swift */,
 				5CA3C2EE2D1171CC003F647F /* sparkswiftdata */,
 				5CA3C2FF2D1171CD003F647F /* sparkswiftdataTests */,
@@ -154,6 +151,7 @@
 				5C328A132D11E474001B851A /* Model */,
 				5C328A152D11E65D001B851A /* TaskViewModel */,
 				5C328A0F2D1194D6001B851A /* TaskTimeFrame.swift */,
+				5C328A202D12E0A9001B851A /* dogGif.gif */,
 				5C328A112D119551001B851A /* TaskSheet.swift */,
 				5CA3C2F32D1171CD003F647F /* Assets.xcassets */,
 				5CA3C2F52D1171CD003F647F /* Preview Content */,
@@ -291,7 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CA3C2F72D1171CD003F647F /* Preview Assets.xcassets in Resources */,
-				45976EFD2D12B50700AB714E /* dogGif.gif in Resources */,
+				5C328A212D12E0A9001B851A /* dogGif.gif in Resources */,
 				5CA3C2F42D1171CD003F647F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct TaskTimeFrame: View {
+    @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     @State private var progress: CGFloat = 1
     @State private var remainingTime: TimeInterval = 0
@@ -9,6 +10,7 @@ struct TaskTimeFrame: View {
     
     var duration: TimeInterval // Accept duration from TaskView
     var name: String       // Accept task name dynamically
+    var task: Task
     
     var body: some View {
         VStack {
@@ -71,6 +73,7 @@ struct TaskTimeFrame: View {
                 primaryButton: .default(Text("Done")
                     .accessibilityLabel("Done Button") // Voice Control-friendly
                 ) {
+                    deleteTask()
                     print("Task Completed") // Done button logic
                 },
                 secondaryButton: .default(
@@ -107,10 +110,22 @@ struct TaskTimeFrame: View {
             }
         }
     }
+    func deleteTask() {
+            context.delete(task) // Delete task using SwiftData context
+            try? context.save()  // Save the changes
+            dismiss()            // Close the view
+        }
 }
 
 #Preview {
+//    NavigationStack {
+//        TaskTimeFrame(duration: 900, name: "Example Task") // Pass task name here
+//    }
     NavigationStack {
-        TaskTimeFrame(duration: 900, name: "Example Task") // Pass task name here
-    }
+            TaskTimeFrame(
+                duration: 900,
+                name: "Example Task",
+                task: Task(name: "Example Task", duration: "15 min", priority: "⚡️ High", isChecked: false)
+            ) // Pass task object here
+        }
 }
