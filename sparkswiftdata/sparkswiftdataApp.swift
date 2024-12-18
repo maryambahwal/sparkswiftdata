@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct sparkswiftdataApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GhadaView()
+//            TaskList()
         }
+        .modelContainer(for: Task.self)
     }
 }
