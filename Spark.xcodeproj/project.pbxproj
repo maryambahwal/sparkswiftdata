@@ -70,6 +70,7 @@
 		79C5A4782D180A9700EACD79 /* dogGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = dogGif.gif; path = ../../../../Downloads/dogGif.gif; sourceTree = "<group>"; };
 		79C5A4822D18151600EACD79 /* Localizable.cxstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Localizable.cxstrings; path = ../../../../.Trash/Localizable.cxstrings; sourceTree = "<group>"; };
 		79C5A4842D18154B00EACD79 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = ../../../../.Trash/Localizable.xcstrings; sourceTree = "<group>"; };
+		79C5A4862D1818A600EACD79 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				5CA3C3192D118C8F003F647F /* GhadaView.swift */,
+				79C5A4862D1818A600EACD79 /* Localizable.xcstrings */,
 				5CA3C2EE2D1171CC003F647F /* sparkswiftdata */,
 				5CA3C2FF2D1171CD003F647F /* sparkswiftdataTests */,
 				5CA3C3092D1171CD003F647F /* sparkswiftdataUITests */,
