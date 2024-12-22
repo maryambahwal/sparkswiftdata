@@ -1,4 +1,5 @@
 import SwiftUI
+import AVFoundation
 
 struct TaskTimeFrame: View {
     @Environment(\.modelContext) private var context
@@ -7,7 +8,7 @@ struct TaskTimeFrame: View {
     @State private var remainingTime: TimeInterval = 0
     @State private var taskTimer: Timer? = nil
     @State private var showAlert = false
-    
+
     var duration: TimeInterval // Accept duration from TaskView
     var name: String           // Accept task name dynamically
     var task: Task
@@ -19,12 +20,12 @@ struct TaskTimeFrame: View {
                 .font(.system(size: 50, weight: .medium, design: .default))
                 .foregroundColor(.primary)
                 .padding(.bottom, 5)
-            
+
             Text(formatTime(remainingTime))
                 .font(.system(size: 50, weight: .ultraLight))
                 .foregroundColor(.primary.opacity(0.94))
                 .padding(.bottom, 60)
-            
+
             ZStack {
                 Circle()
                     .stroke(lineWidth: 20)
@@ -37,7 +38,7 @@ struct TaskTimeFrame: View {
                     .foregroundColor(.our) // Replace with your color
                     .rotationEffect(.degrees(-90))
                     .animation(.easeInOut, value: progress)
-                
+
                 Image("spark_time_frame")
                     .resizable()
                     .scaledToFit()
@@ -53,7 +54,6 @@ struct TaskTimeFrame: View {
                     dismiss()
                 }) {
                     Text("Cancel")
-                 
                 }
             }
         }
@@ -63,6 +63,7 @@ struct TaskTimeFrame: View {
         }
         .onChange(of: remainingTime) { newValue in
             if newValue <= 0 {
+                playAlertSound() // Play sound when time is up
                 showAlert = true
             }
         }
@@ -75,7 +76,7 @@ struct TaskTimeFrame: View {
                     deleteTask()
                 },
                 secondaryButton: .default(Text("Add 15 min")
-                    .accessibilityLabel("add 15 Minutes")) {
+                    .accessibilityLabel("Reset Timer to 15 Minutes")) {
                     resetTimerToFifteenMinutes() // Reset timer to 15 minutes
                 }
             )
@@ -84,13 +85,13 @@ struct TaskTimeFrame: View {
             resetTimerToFifteenMinutes() // Reset timer to 15 minutes
         }
     }
-    
+
     func formatTime(_ time: TimeInterval) -> String {
         let minutes = Int(time) / 60
         let seconds = Int(time) % 60
         return String(format: "%02d:%02d", minutes, seconds)
     }
-    
+
     func startTimer(duration: TimeInterval) {
         remainingTime = duration
         progress = 1.0
@@ -104,17 +105,22 @@ struct TaskTimeFrame: View {
             }
         }
     }
-    
+
     func resetTimerToFifteenMinutes() {
         remainingTime = 15 * 60 // Reset to 15 minutes
         progress = 1.0
         startTimer(duration: remainingTime) // Restart the timer with the new duration
     }
-    
+
     func deleteTask() {
         context.delete(task) // Delete task using SwiftData context
         try? context.save()   // Save the changes
         dismiss()             // Close the view
+    }
+
+    func playAlertSound() {
+        let soundID: SystemSoundID = 1005 // Example built-in sound ID (Ping)
+        AudioServicesPlaySystemSound(soundID)
     }
 }
 
