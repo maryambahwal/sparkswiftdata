@@ -56,13 +56,13 @@
 		5C328A112D119551001B851A /* TaskSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSheet.swift; sourceTree = "<group>"; };
 		5C328A162D11E679001B851A /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		5C328A202D12E0A9001B851A /* dogGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = dogGif.gif; path = ../../../Downloads/dogGif.gif; sourceTree = "<group>"; };
-		5CA3C2EC2D1171CC003F647F /* sparkswiftdata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sparkswiftdata.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CA3C2EC2D1171CC003F647F /* Spark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA3C2EF2D1171CC003F647F /* sparkswiftdataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sparkswiftdataApp.swift; sourceTree = "<group>"; };
 		5CA3C2F32D1171CD003F647F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CA3C2F62D1171CD003F647F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5CA3C2FC2D1171CD003F647F /* sparkswiftdataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sparkswiftdataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CA3C2FC2D1171CD003F647F /* SparkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SparkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA3C3002D1171CD003F647F /* sparkswiftdataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sparkswiftdataTests.swift; sourceTree = "<group>"; };
-		5CA3C3062D1171CD003F647F /* sparkswiftdataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sparkswiftdataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CA3C3062D1171CD003F647F /* SparkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SparkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA3C30A2D1171CD003F647F /* sparkswiftdataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sparkswiftdataUITests.swift; sourceTree = "<group>"; };
 		5CA3C30C2D1171CD003F647F /* sparkswiftdataUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sparkswiftdataUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5CA3C3192D118C8F003F647F /* GhadaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhadaView.swift; sourceTree = "<group>"; };
@@ -135,9 +135,9 @@
 		5CA3C2ED2D1171CC003F647F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5CA3C2EC2D1171CC003F647F /* sparkswiftdata.app */,
-				5CA3C2FC2D1171CD003F647F /* sparkswiftdataTests.xctest */,
-				5CA3C3062D1171CD003F647F /* sparkswiftdataUITests.xctest */,
+				5CA3C2EC2D1171CC003F647F /* Spark.app */,
+				5CA3C2FC2D1171CD003F647F /* SparkTests.xctest */,
+				5CA3C3062D1171CD003F647F /* SparkUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,9 +187,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5CA3C2EB2D1171CC003F647F /* sparkswiftdata */ = {
+		5CA3C2EB2D1171CC003F647F /* Spark */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5CA3C3102D1171CD003F647F /* Build configuration list for PBXNativeTarget "sparkswiftdata" */;
+			buildConfigurationList = 5CA3C3102D1171CD003F647F /* Build configuration list for PBXNativeTarget "Spark" */;
 			buildPhases = (
 				5CA3C2E82D1171CC003F647F /* Sources */,
 				5CA3C2E92D1171CC003F647F /* Frameworks */,
@@ -199,14 +199,14 @@
 			);
 			dependencies = (
 			);
-			name = sparkswiftdata;
+			name = Spark;
 			productName = sparkswiftdata;
-			productReference = 5CA3C2EC2D1171CC003F647F /* sparkswiftdata.app */;
+			productReference = 5CA3C2EC2D1171CC003F647F /* Spark.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5CA3C2FB2D1171CD003F647F /* sparkswiftdataTests */ = {
+		5CA3C2FB2D1171CD003F647F /* SparkTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5CA3C3132D1171CD003F647F /* Build configuration list for PBXNativeTarget "sparkswiftdataTests" */;
+			buildConfigurationList = 5CA3C3132D1171CD003F647F /* Build configuration list for PBXNativeTarget "SparkTests" */;
 			buildPhases = (
 				5CA3C2F82D1171CD003F647F /* Sources */,
 				5CA3C2F92D1171CD003F647F /* Frameworks */,
@@ -217,14 +217,14 @@
 			dependencies = (
 				5CA3C2FE2D1171CD003F647F /* PBXTargetDependency */,
 			);
-			name = sparkswiftdataTests;
+			name = SparkTests;
 			productName = sparkswiftdataTests;
-			productReference = 5CA3C2FC2D1171CD003F647F /* sparkswiftdataTests.xctest */;
+			productReference = 5CA3C2FC2D1171CD003F647F /* SparkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5CA3C3052D1171CD003F647F /* sparkswiftdataUITests */ = {
+		5CA3C3052D1171CD003F647F /* SparkUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5CA3C3162D1171CD003F647F /* Build configuration list for PBXNativeTarget "sparkswiftdataUITests" */;
+			buildConfigurationList = 5CA3C3162D1171CD003F647F /* Build configuration list for PBXNativeTarget "SparkUITests" */;
 			buildPhases = (
 				5CA3C3022D1171CD003F647F /* Sources */,
 				5CA3C3032D1171CD003F647F /* Frameworks */,
@@ -235,9 +235,9 @@
 			dependencies = (
 				5CA3C3082D1171CD003F647F /* PBXTargetDependency */,
 			);
-			name = sparkswiftdataUITests;
+			name = SparkUITests;
 			productName = sparkswiftdataUITests;
-			productReference = 5CA3C3062D1171CD003F647F /* sparkswiftdataUITests.xctest */;
+			productReference = 5CA3C3062D1171CD003F647F /* SparkUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -263,7 +263,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5CA3C2E72D1171CC003F647F /* Build configuration list for PBXProject "sparkswiftdata" */;
+			buildConfigurationList = 5CA3C2E72D1171CC003F647F /* Build configuration list for PBXProject "Spark" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -276,9 +276,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5CA3C2EB2D1171CC003F647F /* sparkswiftdata */,
-				5CA3C2FB2D1171CD003F647F /* sparkswiftdataTests */,
-				5CA3C3052D1171CD003F647F /* sparkswiftdataUITests */,
+				5CA3C2EB2D1171CC003F647F /* Spark */,
+				5CA3C2FB2D1171CD003F647F /* SparkTests */,
+				5CA3C3052D1171CD003F647F /* SparkUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -352,12 +352,12 @@
 /* Begin PBXTargetDependency section */
 		5CA3C2FE2D1171CD003F647F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5CA3C2EB2D1171CC003F647F /* sparkswiftdata */;
+			target = 5CA3C2EB2D1171CC003F647F /* Spark */;
 			targetProxy = 5CA3C2FD2D1171CD003F647F /* PBXContainerItemProxy */;
 		};
 		5CA3C3082D1171CD003F647F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5CA3C2EB2D1171CC003F647F /* sparkswiftdata */;
+			target = 5CA3C2EB2D1171CC003F647F /* Spark */;
 			targetProxy = 5CA3C3072D1171CD003F647F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -490,7 +490,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"sparkswiftdata/Preview Content\"";
-				DEVELOPMENT_TEAM = 456W9WT6L3;
+				DEVELOPMENT_TEAM = HA7FM63B8B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -519,7 +519,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"sparkswiftdata/Preview Content\"";
-				DEVELOPMENT_TEAM = 456W9WT6L3;
+				DEVELOPMENT_TEAM = HA7FM63B8B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -556,7 +556,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sparkswiftdata.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sparkswiftdata";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spark.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Spark";
 			};
 			name = Debug;
 		};
@@ -576,7 +576,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sparkswiftdata.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sparkswiftdata";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spark.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Spark";
 			};
 			name = Release;
 		};
@@ -619,7 +619,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5CA3C2E72D1171CC003F647F /* Build configuration list for PBXProject "sparkswiftdata" */ = {
+		5CA3C2E72D1171CC003F647F /* Build configuration list for PBXProject "Spark" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5CA3C30E2D1171CD003F647F /* Debug */,
@@ -628,7 +628,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5CA3C3102D1171CD003F647F /* Build configuration list for PBXNativeTarget "sparkswiftdata" */ = {
+		5CA3C3102D1171CD003F647F /* Build configuration list for PBXNativeTarget "Spark" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5CA3C3112D1171CD003F647F /* Debug */,
@@ -637,7 +637,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5CA3C3132D1171CD003F647F /* Build configuration list for PBXNativeTarget "sparkswiftdataTests" */ = {
+		5CA3C3132D1171CD003F647F /* Build configuration list for PBXNativeTarget "SparkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5CA3C3142D1171CD003F647F /* Debug */,
@@ -646,7 +646,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5CA3C3162D1171CD003F647F /* Build configuration list for PBXNativeTarget "sparkswiftdataUITests" */ = {
+		5CA3C3162D1171CD003F647F /* Build configuration list for PBXNativeTarget "SparkUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5CA3C3172D1171CD003F647F /* Debug */,

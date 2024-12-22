@@ -9,13 +9,13 @@ struct TaskTimeFrame: View {
     @State private var showAlert = false
     
     var duration: TimeInterval // Accept duration from TaskView
-    var name: String       // Accept task name dynamically
+    var name: String           // Accept task name dynamically
     var task: Task
     
     var body: some View {
         VStack {
             Text(name) // Display the task name dynamically
-                .font(.title) // Automatically scales
+                .font(.title)
                 .font(.system(size: 50, weight: .medium, design: .default))
                 .foregroundColor(.primary)
                 .padding(.bottom, 5)
@@ -29,12 +29,12 @@ struct TaskTimeFrame: View {
                 Circle()
                     .stroke(lineWidth: 20)
                     .opacity(0.3)
-                    .foregroundColor(.our)
+                    .foregroundColor(.our) // Replace with your color
                 
                 Circle()
                     .trim(from: 0.0, to: progress)
                     .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
-                    .foregroundColor(.our)
+                    .foregroundColor(.our) // Replace with your color
                     .rotationEffect(.degrees(-90))
                     .animation(.easeInOut, value: progress)
                 
@@ -53,7 +53,7 @@ struct TaskTimeFrame: View {
                     dismiss()
                 }) {
                     Text("Cancel")
-                        .foregroundColor(.our)
+                 
                 }
             }
         }
@@ -71,24 +71,18 @@ struct TaskTimeFrame: View {
                 title: Text("Time is up!"),
                 message: Text("Tip: turn on back tap, so that you check the task off with ease!"),
                 primaryButton: .default(Text("Done")
-                    .accessibilityLabel("Done Button") // Voice Control-friendly
-                ) {
+                    .accessibilityLabel("Done Button")) {
                     deleteTask()
-                    print("Task Completed") // Done button logic
                 },
-                secondaryButton: .default(
-                    Text("+ 15 min")
-                        .accessibilityLabel("Add 15 Minutes")
-                ) {
-                    remainingTime += 900 // Adds 15 minutes
+                secondaryButton: .default(Text("Add 15 min")
+                    .accessibilityLabel("add 15 Minutes")) {
+                    resetTimerToFifteenMinutes() // Reset timer to 15 minutes
                 }
             )
         }
-
         .accessibilityAction(named: Text("Add Fifteen Minutes")) {
-            remainingTime += 900 // Adds 15 minutes
+            resetTimerToFifteenMinutes() // Reset timer to 15 minutes
         }
-        
     }
     
     func formatTime(_ time: TimeInterval) -> String {
@@ -110,22 +104,26 @@ struct TaskTimeFrame: View {
             }
         }
     }
+    
+    func resetTimerToFifteenMinutes() {
+        remainingTime = 15 * 60 // Reset to 15 minutes
+        progress = 1.0
+        startTimer(duration: remainingTime) // Restart the timer with the new duration
+    }
+    
     func deleteTask() {
-            context.delete(task) // Delete task using SwiftData context
-            try? context.save()  // Save the changes
-            dismiss()            // Close the view
-        }
+        context.delete(task) // Delete task using SwiftData context
+        try? context.save()   // Save the changes
+        dismiss()             // Close the view
+    }
 }
 
 #Preview {
-//    NavigationStack {
-//        TaskTimeFrame(duration: 900, name: "Example Task") // Pass task name here
-//    }
     NavigationStack {
-            TaskTimeFrame(
-                duration: 900,
-                name: "Example Task",
-                task: Task(name: "Example Task", duration: "15 min", priority: "⚡️ High", isChecked: false)
-            ) // Pass task object here
-        }
+        TaskTimeFrame(
+            duration: 10,
+            name: "Example Task",
+            task: Task(name: "Example Task", duration: "15 min", priority: "⚡️ High", isChecked: false)
+        )
+    }
 }
