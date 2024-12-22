@@ -70,7 +70,7 @@ struct TaskTimeFrame: View {
         .alert(isPresented: $showAlert) {
             Alert(
                 title: Text("Time is up!"),
-                message: Text("Tip: turn on back tap, so that you check the task off with ease!"),
+              
                 primaryButton: .default(Text("Done")
                     .accessibilityLabel("Done Button")) {
                     deleteTask()

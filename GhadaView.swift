@@ -119,7 +119,7 @@ struct PageContentView: View {
                 .multilineTextAlignment(.center)
                 .padding(.top, 50)
 
-            getBoldFirstWord(from: item.description)
+            getBoldFirstWord(from: item.Text)
                 .font(.system(size: 20))
                 .multilineTextAlignment(.center)
                 .lineLimit(3)
